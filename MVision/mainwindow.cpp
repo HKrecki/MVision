@@ -13,3 +13,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_btnScreen_clicked()
+{
+
+}
+
+void MainWindow::on_btnSave_clicked()
+{
+
+}
