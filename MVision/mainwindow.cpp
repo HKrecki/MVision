@@ -73,3 +73,11 @@ void MainWindow::shoot()
 
 
 
+// Menu bar:
+void MainWindow::on_actionLoad_Image_triggered()
+{
+    QString file_name = QFileDialog::getOpenFileName(this, "Load image", QDir::homePath());
+    QMessageBox::information(this, "..", file_name);
+
+    // std::cout << file_name.toStdString(); // Print file path in console
+}

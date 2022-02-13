@@ -9,6 +9,11 @@
 #include <QFileInfo>
 #include <QFileDialog>
 #include <QTimer>
+#include <QDebug>
+#include <QDir>
+
+#include <iostream>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,6 +31,8 @@ private slots:
     void on_btnScreen_clicked();
     void on_btnSave_clicked();
     void shoot();
+
+    void on_actionLoad_Image_triggered();
 
 private:
     Ui::MainWindow *ui;
