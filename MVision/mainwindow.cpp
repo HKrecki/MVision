@@ -76,8 +76,24 @@ void MainWindow::shoot()
 // Menu bar:
 void MainWindow::on_actionLoad_Image_triggered()
 {
-    QString file_name = QFileDialog::getOpenFileName(this, "Load image", QDir::homePath());
-    QMessageBox::information(this, "..", file_name);
+    QString file_name = QFileDialog::getOpenFileName(this, "Load image", QDir::homePath(), tr("Images (*.png)"));
 
-    // std::cout << file_name.toStdString(); // Print file path in console
+    //QMessageBox::information(this, "..", file_name);
+
+    // Load image
+    QPixmap image(file_name);
+
+    // Scale image to LblScreen
+    image.scaled(ui->LblScreen->width(), ui->LblScreen->height(), Qt::AspectRatioMode::KeepAspectRatio);
+    ui->LblScreen->setPixmap(image);
 }
+
+
+
+
+
+
+
+
+
+
