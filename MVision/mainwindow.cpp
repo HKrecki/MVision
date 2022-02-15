@@ -78,7 +78,17 @@ void MainWindow::on_actionLoad_Image_triggered()
 {
     QString file_name = QFileDialog::getOpenFileName(this, "Load image", QDir::homePath(), tr("Images (*.png)"));
 
-    //QMessageBox::information(this, "..", file_name);
+    QMessageBox::information(this, "..", file_name);
+
+    /* OpenCV test
+    std::string file_name_string = file_name.toStdString();
+    cv::Mat image2 = cv::imread(file_name_string);
+
+    const std::string window_name = "OpenCV test";
+    cv::namedWindow(window_name);
+    cv::imshow(window_name, image2);
+    cv::waitKey(0);
+    */
 
     // Load image
     QPixmap image(file_name);

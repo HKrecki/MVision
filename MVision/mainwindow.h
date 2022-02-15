@@ -14,6 +14,8 @@
 
 #include <iostream>
 
+#include <opencv2/highgui/highgui.hpp>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
