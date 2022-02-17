@@ -15,6 +15,7 @@
 #include <iostream>
 
 #include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 
 
 QT_BEGIN_NAMESPACE
